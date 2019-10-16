@@ -147,13 +147,13 @@ int main(int argc, const char * argv[])
 	cout << "===============================" << endl;
 
 
-#pragma omp parallel for
+	#pragma omp parallel for
 	for (int d=0; d < n_digit; ++d)
 	{
 		double cost(0);
 		VectorXd w = VectorXd::Zero(n,1);
 		double b(0);
-		VectorXd dw(n,1) = VectorXd::Zero(n,1);
+		VectorXd dw = VectorXd::Zero(n,1);
 		double db(0);
 
 		/*
